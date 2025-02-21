@@ -99,10 +99,8 @@ def exe5(leds, sw):
 
     @always_comb
     def comb():
-        led0 = sw[0]
-        leds[0].next = led0
-        leds[1].next = not led0
-        leds[1].next = sw[0] and sw[1]
+        leds[0].next = sw[0]
+        leds[1].next = (sw[0] and sw[1])
         leds[2].next = not(sw[0])
         leds[3].next = (not(sw[0]) and sw[1]) or (not(sw[1]) and sw[0])
         leds[4].next = True
