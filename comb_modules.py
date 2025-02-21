@@ -118,7 +118,7 @@ def sw2hex(hex_pins, sw):
     """
     Faz a conversão de binário para display de 7 segmentos
     """
-
+# gfeito
     @always_comb
     def comb():
         if sw[4:0] == 0:
